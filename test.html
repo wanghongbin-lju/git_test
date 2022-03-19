@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title>DIV悬浮示例-纯CSS实现</title>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+
+
+</head>
+<body>
+<ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+</ul>
+<script>
+    $(function () {
+        $('body').on('click', 'ul>li', function () {
+            console.log($(this).html());
+        });
+        $('ul').append('<li>5</li><li>6</li>');
+    })
+</script>
+</body>
+</html>
