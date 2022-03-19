@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+
+    <style>
+        table th, td {
+
+            border: 1px solid black;
+        }
+
+        .table-container {
+            width: 100%;
+            overflow-y: auto;
+            _overflow: auto;
+            margin: auto;
+        }
+
+        .dialog {
+            width: 400px;
+            height: 400px;
+            background: burlywood;
+            position: absolute;
+            display: none;
+
+        }
+    </style>
+
+</head>
+<body>
+<div style="display: none" class="dialog">
+    <table>
+        <thead>
+        <tr>
+            <th>子接口</th>
+            <th>参数</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>http://www.baidu.coms</td>
+            <td>123456</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<table width="400" class="table-container">
+    <thead>
+    <tr>
+        <th>id</th>
+        <th>操作</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>1</td>
+        <td><input type="button" value="显示" id="testbut"></td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td><input type="button" value="显示" id="testbut"></td>
+    </tr>
+
+    </tbody>
+</table>
+</body>
+<script>
+
+    $(document).on("click", "#testbut", function () {
+        var css_value = $(".dialog").css("display");
+
+        if (css_value == "none") {
+            $(".dialog").show();
+            $(this).val("隐藏");
+        } else {
+            $(".dialog").hide();
+            $(this).val("显示");
+
+        }
+
+    })
+
+
+</script>
+
+</html>
