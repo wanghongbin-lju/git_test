@@ -51,5 +51,9 @@ class Application:
 
 
 app = Application()
-
+print("212312312")
+print("第一次提交")
+print("需要缓存工作区")
+print("预发布分支修改内容")
+print("提交到远程分支")
 app.start()
